@@ -5,20 +5,20 @@
 class Rockset < Formula
   desc "Rockset CLI"
   homepage "https://github.com/rockset/cli"
-  version "0.0.20"
+  version "0.0.21"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rockset/cli/releases/download/v0.0.20/rockset_Darwin_arm64.tar.gz"
-      sha256 "eecb802c460c80aaaa58f257e3d185c6fc70dce58cc3c7bb62a9406268cd6cd7"
+      url "https://github.com/rockset/cli/releases/download/v0.0.21/rockset_Darwin_arm64.tar.gz"
+      sha256 "4a968e294ad4c16d427ad169a6342e2d3ab3974ec4ba692dde555f001ba27149"
 
       def install
         bin.install "rockset"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rockset/cli/releases/download/v0.0.20/rockset_Darwin_x86_64.tar.gz"
-      sha256 "c86fbb8232933d75064654cc54c201228acbb4c269597f870706b003aae0a5fe"
+      url "https://github.com/rockset/cli/releases/download/v0.0.21/rockset_Darwin_x86_64.tar.gz"
+      sha256 "0b7740612e4570a206f1918bcdebd3903522335b9f24525db3f1d03de5e55491"
 
       def install
         bin.install "rockset"
@@ -28,16 +28,16 @@ class Rockset < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rockset/cli/releases/download/v0.0.20/rockset_Linux_arm64.tar.gz"
-      sha256 "408b21b5db70d3959692faa440d19249e4b6a1e96626ad40d3c98bc91bd0d6fd"
+      url "https://github.com/rockset/cli/releases/download/v0.0.21/rockset_Linux_arm64.tar.gz"
+      sha256 "b32c17e63d36b501e72422fb9292257b50d40375f443ba9180ba530662a1244d"
 
       def install
         bin.install "rockset"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rockset/cli/releases/download/v0.0.20/rockset_Linux_x86_64.tar.gz"
-      sha256 "305bb2fb96aa295536fbb7d35087a5654d6c8cb529fbad6e555844a7c98dcc56"
+      url "https://github.com/rockset/cli/releases/download/v0.0.21/rockset_Linux_x86_64.tar.gz"
+      sha256 "1c7904331169ebbaf612aefaa3340e2ebddda380fb9be3a10bb52306b9efe93c"
 
       def install
         bin.install "rockset"
