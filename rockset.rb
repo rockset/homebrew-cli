@@ -5,20 +5,20 @@
 class Rockset < Formula
   desc "Rockset CLI"
   homepage "https://github.com/rockset/cli"
-  version "0.0.24"
+  version "0.0.25"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rockset/cli/releases/download/v0.0.24/rockset_Darwin_arm64.tar.gz"
-      sha256 "5479f7073d21f9b5c097c47b45a1ef9082bf80487781e176b1e9f6740c502f23"
+    if Hardware::CPU.intel?
+      url "https://github.com/rockset/cli/releases/download/v0.0.25/rockset_Darwin_x86_64.tar.gz"
+      sha256 "6b777a05b439c0d1cf88eb69157a539e5cb18862074ae5699806e19885bd6b37"
 
       def install
         bin.install "rockset"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rockset/cli/releases/download/v0.0.24/rockset_Darwin_x86_64.tar.gz"
-      sha256 "11ff204a14fc63867865525e824c0a0e54c046bb22a555ba030f2720aefb8f58"
+    if Hardware::CPU.arm?
+      url "https://github.com/rockset/cli/releases/download/v0.0.25/rockset_Darwin_arm64.tar.gz"
+      sha256 "1d1d7874c87eb50aa75958b83cee940c99dda89545053a2807fd31ff7b63d252"
 
       def install
         bin.install "rockset"
@@ -27,17 +27,17 @@ class Rockset < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rockset/cli/releases/download/v0.0.24/rockset_Linux_arm64.tar.gz"
-      sha256 "d3625da3cd81b1a86ca918ee74ebb686d4331e343ec0d8900219267c0a6edacc"
+    if Hardware::CPU.intel?
+      url "https://github.com/rockset/cli/releases/download/v0.0.25/rockset_Linux_x86_64.tar.gz"
+      sha256 "b7bea793301e38e5b47caf42d7f229ae65d53959f3ff01bfa14c78e3ad67d057"
 
       def install
         bin.install "rockset"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rockset/cli/releases/download/v0.0.24/rockset_Linux_x86_64.tar.gz"
-      sha256 "c9924518da37ac21e38a4a3618843b2291f1e9982b6e1d61114d4100fa92ef0e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rockset/cli/releases/download/v0.0.25/rockset_Linux_arm64.tar.gz"
+      sha256 "3ec9c92958614444036dd8fc9c63a143f93033800deb89cb37f4b42f5af81318"
 
       def install
         bin.install "rockset"
